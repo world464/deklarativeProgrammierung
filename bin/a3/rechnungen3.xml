@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rechnungen SYSTEM "rechnungensBeschreibung3.dtd">
+<rechnungen><!-- Mat: 82356 Gruppe 0 -->
+	<rechnung>
+		<absender>
+			<name>Bestattungen Unterberg</name>
+			<adresse>
+				<straße>Oberbergweg</straße>
+				<haus-nummer>5</haus-nummer>
+				<post-leit-zahl>43210</post-leit-zahl>
+				<ort>Ultursingen</ort>
+			</adresse>
+			<kontakt>
+				<telefon>0478/777555</telefon>
+				<fax></fax>
+				<email>unter@berg.de</email>
+			</kontakt>
+		</absender>
+		<empfaenger>
+			<name>Familie Urmel</name>
+			<adresse>
+				<straße>Ulturenstrasse</straße>
+				<haus-nummer>764</haus-nummer>
+				<post-leit-zahl>43210</post-leit-zahl>
+				<ort>Ultursingen</ort>
+			</adresse>
+			<kontakt>
+				<telefon></telefon>
+				<fax></fax>
+				<email></email>
+			</kontakt>
+		</empfaenger>
+		<leistungen>
+			<leistung>
+				<menge>1</menge>
+				<produkt>Urne, Eiche massiv</produkt>
+				<einzel-preis waehrung="Euro"></einzel-preis>
+				<gesamt-preis waehrung="Euro">299.99</gesamt-preis>
+				<mehr-wert-steuer></mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>1</menge>
+				<produkt>Überführung Krematorium Feuerbach inkl. Begleitpersonal</produkt>
+				<einzel-preis waehrung="Euro"></einzel-preis>
+				<gesamt-preis waehrung="Euro">349.00</gesamt-preis>
+				<mehr-wert-steuer></mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>1</menge>
+				<produkt>Dekoration</produkt>
+				<einzel-preis waehrung="Euro"></einzel-preis>
+				<gesamt-preis waehrung="Euro">149.50</gesamt-preis>
+				<mehr-wert-steuer></mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>40</menge>
+				<produkt>Trauerkarten inkl. Briefmarken</produkt>
+				<einzel-preis waehrung="Euro">2.00</einzel-preis>
+				<gesamt-preis waehrung="Euro">80.00</gesamt-preis>
+				<mehr-wert-steuer></mehr-wert-steuer>
+			</leistung>
+		</leistungen>
+		<daten>
+			<steuer-nummer>DE 987654321</steuer-nummer>
+			<ausstellungs-datum>2017-10-19</ausstellungs-datum>
+			<rechnungs-nummer>893 213 11</rechnungs-nummer>
+			<abrechnung>
+				<betrag waehrung="Euro">878.49</betrag>
+				<netto waehrung="Euro">738.23</netto>
+				<mehr-wert-steuer-gesamt waehrung="Euro">140.23</mehr-wert-steuer-gesamt>
+			</abrechnung>
+			<zahlung>
+				<internationale-bank-konto-nummer></internationale-bank-konto-nummer>
+				<bank-identifizierungs-code></bank-identifizierungs-code>
+				<konto-nummer></konto-nummer>
+				<bitcoin-adresse></bitcoin-adresse>
+			</zahlung>
+		</daten>
+	</rechnung>
+</rechnungen>

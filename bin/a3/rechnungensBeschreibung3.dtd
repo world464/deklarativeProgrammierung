@@ -1,0 +1,45 @@
+<!ELEMENT rechnungen (rechnung+) >
+<!ELEMENT rechnung (absender, empfaenger, leistungen, daten)>
+
+<!ELEMENT absender (name, adresse, kontakt?)>
+<!ELEMENT empfaenger (name, adresse, kontakt?)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT adresse (straße, haus-nummer, post-leit-zahl, ort)>
+
+<!ELEMENT straße (#PCDATA)>
+<!ELEMENT haus-nummer (#PCDATA)>
+<!ELEMENT post-leit-zahl (#PCDATA)>
+<!ELEMENT ort (#PCDATA)>
+
+<!ELEMENT kontakt (telefon?, fax?, email?)>
+
+<!ELEMENT telefon (#PCDATA)>
+<!ELEMENT fax (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT leistungen (leistung+)>
+<!ELEMENT leistung (menge?, produkt, einzel-preis, gesamt-preis, mehr-wert-steuer)>
+
+<!ELEMENT menge (#PCDATA) >
+<!ELEMENT produkt (#PCDATA) >
+<!ELEMENT einzel-preis (#PCDATA) >
+<!ATTLIST einzel-preis waehrung CDATA #REQUIRED>
+<!ELEMENT gesamt-preis (#PCDATA) >
+<!ATTLIST gesamt-preis waehrung CDATA #REQUIRED>
+<!ELEMENT mehr-wert-steuer (#PCDATA) >
+
+<!ELEMENT daten (steuer-nummer, ausstellungs-datum, rechnungs-nummer, abrechnung) >
+
+<!ELEMENT steuer-nummer (#PCDATA) >
+<!ELEMENT ausstellungs-datum (#PCDATA) >
+<!ELEMENT rechnungs-nummer (#PCDATA) >
+
+<!ELEMENT abrechnung (betrag, netto, mehr-wert-steuer-gesamt) >
+
+<!ELEMENT betrag (#PCDATA) >
+<!ATTLIST betrag waehrung CDATA #REQUIRED>
+<!ELEMENT netto (#PCDATA) >
+<!ATTLIST netto waehrung CDATA #REQUIRED>
+<!ELEMENT mehr-wert-steuer-gesamt (#PCDATA) >
+<!ATTLIST mehr-wert-steuer-gesamt waehrung CDATA #REQUIRED>

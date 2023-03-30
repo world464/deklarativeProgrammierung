@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rechnungen><!-- Mat: 82356 Gruppe 0 -->
+	<rechnung>
+		<absender>
+			<name>Kleintier Meier GmbH</name>
+			<adresse>
+				<strasse>Meierring</strasse>
+				<haus-nummer>3</haus-nummer>
+				<postleitzahl>81828</postleitzahl>
+				<ort>Machthausen</ort>
+			</adresse>
+			<kontakt>
+				<telefon>0777/9877987</telefon>
+				<fax>0777/987789</fax>
+				<email>klein.meier@tiere.de</email>
+			</kontakt>
+		</absender>
+		<daten>
+			<steuer-nummer>88 123/8282 2</steuer-nummer>
+			<ausstellungs-datum>2017-01-15</ausstellungs-datum>
+			<rechnungs-nummer>657321</rechnungs-nummer>
+			<betrag>962.22</betrag>
+		</daten>
+	</rechnung>
+</rechnungen>
