@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE rechnungen SYSTEM "rechnungensBeschreibung3.dtd">
-<rechnungen><!-- Mat: 82356 Gruppe 0 -->
+<p:rechnungen xmlns:p="mein.namensraum"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="mein.namensraum rechnungen3.xsd ">
+                <!-- Mat: 82356 Gruppe 0 -->
 	<rechnung>
 		<absender>
 			<name>Bestattungen Unterberg</name>
 			<adresse>
-				<straße>Oberbergweg</straße>
+				<strasse>Oberbergweg</strasse>
 				<haus-nummer>5</haus-nummer>
 				<post-leit-zahl>43210</post-leit-zahl>
 				<ort>Ultursingen</ort>
 			</adresse>
 			<kontakt>
-				<telefon>0478/777555</telefon>
+				<telefon>04787775559</telefon>
 				<fax></fax>
 				<email>unter@berg.de</email>
 			</kontakt>
@@ -19,16 +21,11 @@
 		<empfaenger>
 			<name>Familie Urmel</name>
 			<adresse>
-				<straße>Ulturenstrasse</straße>
+				<strasse>Ulturenstrasse</strasse>
 				<haus-nummer>764</haus-nummer>
 				<post-leit-zahl>43210</post-leit-zahl>
 				<ort>Ultursingen</ort>
 			</adresse>
-			<kontakt>
-				<telefon></telefon>
-				<fax></fax>
-				<email></email>
-			</kontakt>
 		</empfaenger>
 		<leistungen>
 			<leistung>
@@ -70,11 +67,12 @@
 				<mehr-wert-steuer-gesamt waehrung="Euro">140.23</mehr-wert-steuer-gesamt>
 			</abrechnung>
 			<zahlung>
-				<internationale-bank-konto-nummer></internationale-bank-konto-nummer>
-				<bank-identifizierungs-code></bank-identifizierungs-code>
-				<konto-nummer></konto-nummer>
-				<bitcoin-adresse></bitcoin-adresse>
+				<internationale-bank-konto-nummer>DE02120300000000202051</internationale-bank-konto-nummer>
+				<bank-identifizierungs-code>UBSWEIJCED</bank-identifizierungs-code>
+				<konto-nummer>7523423</konto-nummer>
+				<bitcoin-adresse>12jgaijir3ni3212iej32jr232r2IOURNISnifa</bitcoin-adresse>
 			</zahlung>
+			<einheit>EUR</einheit>
 		</daten>
 	</rechnung>
-</rechnungen>
+</p:rechnungen>

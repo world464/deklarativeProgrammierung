@@ -1,23 +1,162 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns="mein.namensraum"
-           targetNamespace="mein.namensraum">
-  <!-- alle Element und Attribute sind als 
-       nicht qualifiziert (unqualified) definiert (default) -->
-  <xs:element name="sport-events">
-    <xs:complexType>
-       <xs:sequence>
-       <xs:element name="city" type="xs:string" />
-       <xs:element name="event" type="event-type" maxOccurs="unbounded"/>
-     </xs:sequence>
-     <xs:attribute name="version" type="xs:decimal"
-                   use="optional" default="1.0"/>
-   </xs:complexType>
-  </xs:element>
-  <xs:complexType name="event-type">
-    <xs:all>
-      <xs:element name="name" type="xs:normalizedString"/>
-      <xs:element name="start" type="xs:date"/>
-      <xs:element name="code" type="xs:int" minOccurs="0"/>
-    </xs:all>
-  </xs:complexType>
+	xmlns="mein.namensraum" targetNamespace="mein.namensraum">
+	<xs:element name="rechnungen"><!-- 82356 mod 7 = 1 -->
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="rechnung">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="absender">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name"></xs:element>
+										<xs:element name="adresse">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="strasse" type="xs:string"></xs:element>
+													<xs:element name="haus-nummer" type="xs:integer"></xs:element>
+													<xs:element name="post-leit-zahl"
+														type="xs:integer"></xs:element>
+													<xs:element name="ort"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="kontakt" minOccurs="0">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="telefon" type="xs:decimal"></xs:element>
+													<xs:element name="fax"></xs:element>
+													<xs:element name="email"></xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="empfaenger">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name"></xs:element>
+										<xs:element name="adresse">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="strasse" type="xs:string"></xs:element>
+													<xs:element name="haus-nummer" type="xs:integer"></xs:element>
+													<xs:element name="post-leit-zahl"
+														type="xs:integer"></xs:element>
+													<xs:element name="ort"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="kontakt" minOccurs="0">
+											<xs:complexType>
+												<xs:all>
+													<xs:element name="telefon" type="xs:integer"></xs:element>
+													<xs:element name="fax"></xs:element>
+													<xs:element name="email"></xs:element>
+												</xs:all>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="leistungen">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="leistung" minOccurs="1"
+											maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="menge" type="xs:integer"></xs:element>
+													<xs:element name="produkt"></xs:element>
+													<xs:element name="einzel-preis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="waehrung"
+																		type="xs:string" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="gesamt-preis">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="waehrung"
+																		type="xs:string" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="mehr-wert-steuer"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="daten">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="steuer-nummer"></xs:element>
+										<xs:element name="ausstellungs-datum"
+											type="xs:date"></xs:element>
+										<xs:element name="rechnungs-nummer"></xs:element>
+										<xs:element name="abrechnung">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="betrag">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="waehrung"
+																		type="xs:string" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="netto">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="waehrung"
+																		type="xs:string" />
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="mehr-wert-steuer-gesamt"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="zahlung">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element
+														name="internationale-bank-konto-nummer"></xs:element>
+													<xs:element name="bank-identifizierungs-code"></xs:element>
+													<xs:element name="konto-nummer"></xs:element>
+													<xs:element name="bitcoin-adresse"></xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="einheit">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="EUR" />
+													<xs:enumeration value="USD" />
+													<xs:enumeration value="CHF" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>
