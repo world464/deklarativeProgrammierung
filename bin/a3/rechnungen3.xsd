@@ -1,9 +1,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns="mein.namensraum" targetNamespace="mein.namensraum">
-	<xs:element name="rechnungen"><!-- 82356 mod 7 = 1 -->
+	<xs:element name="rechnungen" ><!-- 82356 mod 7 = 1 -->
 		<xs:complexType>
-			<xs:all>
-				<xs:element name="rechnung">
+			<xs:sequence>
+				<xs:element name="rechnung" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="absender">
@@ -15,7 +15,7 @@
 												<xs:sequence>
 													<xs:element name="strasse" type="xs:string"></xs:element>
 													<xs:element name="haus-nummer" type="xs:integer"></xs:element>
-													<xs:element name="post-leit-zahl"
+													<xs:element name="postleitzahl"
 														type="xs:integer"></xs:element>
 													<xs:element name="ort"></xs:element>
 												</xs:sequence>
@@ -24,9 +24,9 @@
 										<xs:element name="kontakt" minOccurs="0">
 											<xs:complexType>
 												<xs:all>
-													<xs:element name="telefon" type="xs:decimal"></xs:element>
-													<xs:element name="fax"></xs:element>
-													<xs:element name="email"></xs:element>
+													<xs:element name="telefon" type="xs:decimal" minOccurs="0"></xs:element>
+													<xs:element name="fax" minOccurs="0"></xs:element>
+													<xs:element name="email" minOccurs="0"></xs:element>
 												</xs:all>
 											</xs:complexType>
 										</xs:element>
@@ -41,8 +41,8 @@
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element name="strasse" type="xs:string"></xs:element>
-													<xs:element name="haus-nummer" type="xs:integer"></xs:element>
-													<xs:element name="post-leit-zahl"
+													<xs:element name="haus-nummer" type="xs:string"></xs:element>
+													<xs:element name="postleitzahl"
 														type="xs:integer"></xs:element>
 													<xs:element name="ort"></xs:element>
 												</xs:sequence>
@@ -51,9 +51,9 @@
 										<xs:element name="kontakt" minOccurs="0">
 											<xs:complexType>
 												<xs:all>
-													<xs:element name="telefon" type="xs:integer"></xs:element>
-													<xs:element name="fax"></xs:element>
-													<xs:element name="email"></xs:element>
+													<xs:element name="telefon" type="xs:integer" minOccurs="0"></xs:element>
+													<xs:element name="fax" minOccurs="0"></xs:element>
+													<xs:element name="email" minOccurs="0"></xs:element>
 												</xs:all>
 											</xs:complexType>
 										</xs:element>
@@ -67,7 +67,8 @@
 											maxOccurs="unbounded">
 											<xs:complexType>
 												<xs:sequence>
-													<xs:element name="menge" type="xs:integer"></xs:element>
+													<xs:element name="menge" type="xs:integer" minOccurs="0"></xs:element>
+													<xs:element name="einheit" type="xs:string" minOccurs="0"></xs:element>												
 													<xs:element name="produkt"></xs:element>
 													<xs:element name="einzel-preis">
 														<xs:complexType>
@@ -134,14 +135,14 @@
 											<xs:complexType>
 												<xs:sequence>
 													<xs:element
-														name="internationale-bank-konto-nummer"></xs:element>
+														name="internationale-bank-konto-nummer" minOccurs="0"></xs:element>
 													<xs:element name="bank-identifizierungs-code"></xs:element>
-													<xs:element name="konto-nummer"></xs:element>
-													<xs:element name="bitcoin-adresse"></xs:element>
+													<xs:element name="konto-nummer" minOccurs="0"></xs:element>
+													<xs:element name="bitcoin-adresse" minOccurs="0"></xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:element name="einheit">
+										<xs:element name="geld-einheit">
 											<xs:simpleType>
 												<xs:restriction base="xs:string">
 													<xs:enumeration value="EUR" />
@@ -156,7 +157,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-			</xs:all>
+			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 </xs:schema>

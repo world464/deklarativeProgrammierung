@@ -1,20 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <p:rechnungen xmlns:p="mein.namensraum"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="mein.namensraum rechnungen3.xsd ">
                 <!-- Mat: 82356 Gruppe 0 -->
+                <rechnung>
+		<absender>
+			<name>Kleintier Meier GmbH</name>
+			<adresse>
+				<strasse>Meierring</strasse>
+				<haus-nummer>3</haus-nummer>
+				<postleitzahl>81828</postleitzahl>
+				<ort>Machthausen</ort>
+			</adresse>
+			<kontakt>
+				<telefon>07779877987</telefon>
+				<fax>0777/987789</fax>
+				<email>klein.meier@tiere.de</email>
+			</kontakt>
+		</absender>
+		<empfaenger>
+			<name>Sybille Sonder-Suttelrau</name>
+			<adresse>
+				<strasse>Am Süttelbach</strasse>
+				<haus-nummer>17</haus-nummer>
+				<postleitzahl>77070</postleitzahl>
+				<ort>Siedelsuderstadt</ort>
+			</adresse>
+		</empfaenger>
+		<leistungen>
+			<leistung>
+				<menge>100</menge>					
+				<produkt>Antike Holzwürmer</produkt>
+				<einzel-preis waehrung="Euro">1.50</einzel-preis>
+				<gesamt-preis waehrung="Euro">150.00</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>1</menge>					
+				<produkt>Holzwurmfutter</produkt>
+				<einzel-preis waehrung="Euro">34.45</einzel-preis>
+				<gesamt-preis waehrung="Euro">34.45</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>1</menge>					
+				<produkt>Steinlaus, Petrophagaloritoti</produkt>
+				<einzel-preis waehrung="Euro">777.77</einzel-preis>
+				<gesamt-preis waehrung="Euro">777.77</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+		</leistungen>
+		<daten>
+			<steuer-nummer>8812382822</steuer-nummer>
+			<ausstellungs-datum>2017-01-15</ausstellungs-datum>
+			<rechnungs-nummer>657321</rechnungs-nummer>
+			<abrechnung>
+				<betrag waehrung="Euro">962.22</betrag>
+				<netto waehrung="Euro">808.59</netto>
+				<mehr-wert-steuer-gesamt waehrung="Euro">153.63</mehr-wert-steuer-gesamt>
+			</abrechnung>
+			<zahlung>
+				<bank-identifizierungs-code>BLZ 660500101</bank-identifizierungs-code>
+				<konto-nummer>987654321</konto-nummer>		
+			</zahlung>
+			<geld-einheit>EUR</geld-einheit>
+		</daten>
+	</rechnung>
+	<rechnung>
+		<absender>
+			<name>Rochade-La Hoff Pharma GmbH</name>
+			<adresse>
+				<strasse>An der Chemie</strasse>
+				<haus-nummer>17</haus-nummer>
+				<postleitzahl>79639</postleitzahl>
+				<ort>Grenzych-Wahlen</ort>
+			</adresse>
+			<kontakt>
+				<telefon>07624666333999</telefon>
+				<fax>07624/666333990</fax>
+			</kontakt>
+		</absender>
+		<empfaenger>
+			<name>Dr.med.Cyprian Zottel</name>
+			<adresse>
+				<strasse>Soddelstrudel</strasse>
+				<haus-nummer>5a</haus-nummer>
+				<postleitzahl>13023</postleitzahl>
+				<ort>Zotenheim</ort>
+			</adresse>
+		</empfaenger>
+		<leistungen>
+			<leistung>
+				<menge>3</menge>
+				<einheit>Packungen</einheit>
+				<produkt>Grippemittel"Tumifla"</produkt>
+				<einzel-preis waehrung="Euro">120.00</einzel-preis>
+				<gesamt-preis waehrung="Euro">360.00</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<produkt>Beratung pauschal</produkt>
+				<einzel-preis waehrung="Euro"></einzel-preis>
+				<gesamt-preis waehrung="Euro">50.00</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>2</menge>
+				<einheit>Liter</einheit>
+				<produkt>Abführmittel"Wech damit" pro Liter</produkt>
+				<einzel-preis waehrung="Euro">99.99</einzel-preis>
+				<gesamt-preis waehrung="Euro">199.98</gesamt-preis>
+				<mehr-wert-steuer>19</mehr-wert-steuer>
+			</leistung>
+			<leistung>
+				<menge>2</menge>
+				<einheit>Stueck</einheit>
+				<produkt>Energieriegel "Satto"</produkt>
+				<einzel-preis waehrung="Euro">5.98</einzel-preis>
+				<gesamt-preis waehrung="Euro">11.96</gesamt-preis>
+				<mehr-wert-steuer>7</mehr-wert-steuer>
+			</leistung>
+		</leistungen>
+		<daten>
+			<steuer-nummer>DE333666999</steuer-nummer>
+			<ausstellungs-datum>2017-08-08</ausstellungs-datum>
+			<rechnungs-nummer>98-798-7987</rechnungs-nummer>
+			<abrechnung>
+				<betrag waehrung="Euro">962.22</betrag>
+				<netto waehrung="Euro">490.22</netto>
+				<mehr-wert-steuer-gesamt waehrung="Euro">116.74</mehr-wert-steuer-gesamt>
+			</abrechnung>
+			<zahlung>
+				<internationale-bank-konto-nummer>DE183700340999666333</internationale-bank-konto-nummer>
+				<bank-identifizierungs-code>DEUTDE6F683</bank-identifizierungs-code>		
+			</zahlung>
+			<geld-einheit>EUR</geld-einheit>
+		</daten>
+	</rechnung>
 	<rechnung>
 		<absender>
 			<name>Bestattungen Unterberg</name>
 			<adresse>
 				<strasse>Oberbergweg</strasse>
 				<haus-nummer>5</haus-nummer>
-				<post-leit-zahl>43210</post-leit-zahl>
+				<postleitzahl>43210</postleitzahl>
 				<ort>Ultursingen</ort>
 			</adresse>
 			<kontakt>
 				<telefon>04787775559</telefon>
-				<fax></fax>
 				<email>unter@berg.de</email>
 			</kontakt>
 		</absender>
@@ -23,7 +156,7 @@
 			<adresse>
 				<strasse>Ulturenstrasse</strasse>
 				<haus-nummer>764</haus-nummer>
-				<post-leit-zahl>43210</post-leit-zahl>
+				<postleitzahl>43210</postleitzahl>
 				<ort>Ultursingen</ort>
 			</adresse>
 		</empfaenger>
@@ -72,7 +205,7 @@
 				<konto-nummer>7523423</konto-nummer>
 				<bitcoin-adresse>12jgaijir3ni3212iej32jr232r2IOURNISnifa</bitcoin-adresse>
 			</zahlung>
-			<einheit>EUR</einheit>
+			<geld-einheit>EUR</geld-einheit>
 		</daten>
 	</rechnung>
 </p:rechnungen>
